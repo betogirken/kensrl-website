@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ken SRL — Obras de Gas Natural</title>
+  <meta name="description" content="Ken SRL: redes, gasoductos e instalaciones de gas natural en NOA." />
+  <style>
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Arial,sans-serif;line-height:1.5}
+    header{padding:56px 20px;text-align:center;background:#0f172a;color:#fff}
+    header h1{margin:0 0 8px;font-size:clamp(28px,5vw,44px)}
+    header p{margin:0;opacity:.9}
+    main{max-width:1000px;margin:40px auto;padding:0 20px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+    .card{border:1px solid #e5e7eb;border-radius:16px;padding:20px}
+    .btn{display:inline-block;margin-top:16px;padding:12px 18px;border-radius:999px;border:1px solid #0f172a;text-decoration:none}
+    footer{margin:40px 0;padding:20px;text-align:center;color:#475569}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Ken SRL</h1>
+    <p>Redes, gasoductos e instalaciones de gas natural</p>
+  </header>
+  <main>
+    <section class="grid">
+      <div class="card">
+        <h2>Qué hacemos</h2>
+        <p>Obras de gas natural: proyectos, construcción y mantenimiento de redes y gasoductos.</p>
+      </div>
+      <div class="card">
+        <h2>Dónde trabajamos</h2>
+        <p>NOA y regiones cercanas. Atención a clientes residenciales, comerciales e industriales.</p>
+      </div>
+      <div class="card">
+        <h2>Contacto</h2>
+        <p>Email: <a href="mailto:info@kensrl.com">info@kensrl.com</a><br/>
+           Tel: +54 (___) ________</p>
+        <a class="btn" href="mailto:info@kensrl.com">Escribinos</a>
+      </div>
+    </section>
+  </main>
+  <footer>© <span id="y"></span> Ken SRL — kensrl.com</footer>
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body>
+</html>
