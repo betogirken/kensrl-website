@@ -19,8 +19,13 @@
     header{padding:32px 20px 48px;background:var(--brand);color:#fff;text-align:center}
     header .brand{display:flex;align-items:center;justify-content:center;gap:14px;margin-bottom:8px}
     header .brand img{height:56px;width:auto;display:block}
-    header h1{margin:0;font-size:clamp(28px,5vw,44px);font-weight:700}
     header p{margin:6px 0 0 0;opacity:.95;font-weight:500}
+
+    /* Visually hidden (accesible para lectores de pantalla) */
+    .sr-only{
+      position:absolute !important;width:1px;height:1px;padding:0;margin:-1px;
+      overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;
+    }
 
     /* Main layout */
     main{max-width:1000px;margin:40px auto;padding:0 20px}
@@ -49,7 +54,7 @@
   <header>
     <div class="brand">
       <img src="logo_ken.png" alt="Ken SRL">
-      <h1>Ken SRL</h1>
+      <h1 class="sr-only">Ken SRL</h1>
     </div>
     <p>Redes, gasoductos e instalaciones de gas natural</p>
   </header>
@@ -74,14 +79,14 @@
           Tel: +54 9 387 459 4914
         </p>
 
-        <!-- WhatsApp button -->
+        <!-- WhatsApp -->
         <a class="btn whatsapp" href="https://wa.me/5493874594914" target="_blank" rel="noopener">
           Escribinos por WhatsApp
         </a>
 
-        <!-- Alternative email button -->
+        <!-- Mail alternativo -->
         <a class="btn mail" href="mailto:albertogir@kensrl.com">
-          Enviar email a Alberto
+          Enviar mail
         </a>
       </div>
     </section>
