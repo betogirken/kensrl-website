@@ -1,14 +1,24 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <!-- Favicons -->
-  <link rel="icon" type="image/png" href="favicon.png">
-  <link rel="icon" href="favicon.ico">
+  <!-- Favicons (archivos en la RAÍZ del repo) -->
+  <link rel="icon" href="favicon.ico?v=7" sizes="any">
+  <link rel="icon" type="image/png" href="favicon.png?v=7">
+  <link rel="alternate icon" type="image/png" href="favicon-32.png?v=7" sizes="32x32">
 
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ken SRL — Obras de Gas Natural</title>
   <meta name="description" content="Ken SRL: redes, gasoductos e instalaciones de gas natural en NOA." />
+  <meta name="theme-color" content="#0f172a">
+
+  <!-- Open Graph / Twitter (opcional, mejora vista al compartir) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Ken SRL — Obras de Gas Natural">
+  <meta property="og:description" content="Redes, gasoductos e instalaciones de gas natural. Salta y NOA.">
+  <meta property="og:image" content="logo-ken-2x.png?v=7">
+  <meta property="og:url" content="https://www.kensrl.com">
+  <meta name="twitter:card" content="summary_large_image">
 
   <style>
     :root { --brand:#0f172a; --ink:#0f172a; --muted:#475569; --border:#e5e7eb; --accent:#0e7a83; }
@@ -42,7 +52,7 @@
     .btn:hover{opacity:.95;transform:translateY(-1px);transition:all .12s ease}
 
     /* Footer */
-    footer{margin:40px 0;padding:20px;text-align:center;color:var(--muted);font-size:14px}
+    footer{margin:40px 0;padding:20px;text-align:center;color:#a3a3a3;font-size:14px}
     a{color:var(--accent)}
     @media (max-width:700px){
       header .brand{gap:10px}
@@ -53,7 +63,18 @@
 <body>
   <header>
     <div class="brand">
-      <img src="logo_ken.png" alt="Ken SRL">
+      <!-- Logo en raíz del repo + fallback a logo_ken.png -->
+      <picture>
+        <img
+          src="logo-ken-1x.png?v=7"
+          srcset="logo-ken-2x.png?v=7 2x, logo-ken-1x.png?v=7 1x"
+          alt="Ken SRL"
+          height="56"
+          loading="eager"
+          decoding="async"
+          onerror="this.onerror=null; this.src='logo_ken.png?v=7';"
+        >
+      </picture>
       <h1 class="sr-only">Ken SRL</h1>
     </div>
     <p>Redes, gasoductos e instalaciones de gas natural</p>
