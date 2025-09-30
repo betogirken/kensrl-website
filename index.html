@@ -2,9 +2,9 @@
 <html lang="es">
 <head>
   <!-- Favicons (archivos en la RAÍZ del repo) -->
-  <link rel="icon" href="favicon.ico?v=8" sizes="any">
-  <link rel="icon" type="image/png" href="favicon.png?v=8">
-  <link rel="alternate icon" type="image/png" href="favicon-32.png?v=8" sizes="32x32">
+  <link rel="icon" href="favicon.ico?v=10" sizes="any">
+  <link rel="icon" type="image/png" href="favicon.png?v=10">
+  <link rel="alternate icon" type="image/png" href="favicon-32.png?v=10" sizes="32x32">
 
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -25,26 +25,32 @@
     *{box-sizing:border-box}
     body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Arial,sans-serif;line-height:1.5;color:var(--ink);background:#fff}
 
-    /* Header (oscuro, con logo + botones) */
+    /* Header (oscuro, SOLO logo) */
     header{position:sticky;top:0;z-index:10;background:var(--bg);color:var(--text);border-bottom:1px solid rgba(255,255,255,.08)}
-    .nav{max-width:1100px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .nav{max-width:1100px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:center}
     .brand{display:flex;align-items:center;gap:12px}
     .brand img{height:42px;width:auto;display:block}
-    .cta{display:flex;align-items:center;gap:10px}
-    .btn{display:inline-flex;align-items:center;gap:10px;padding:9px 14px;border-radius:999px;border:1px solid rgba(255,255,255,.18);color:var(--text);text-decoration:none;font-weight:700;background:transparent;transition:.12s ease}
+
+    /* Hero (franja oscura con claim y los ÚNICOS botones) */
+    .hero{background:var(--bg);color:var(--text);padding:32px 20px 36px;border-bottom:1px solid rgba(255,255,255,.08)}
+    .hero .wrap{max-width:1100px;margin:0 auto;text-align:center}
+    .hero h1{margin:10px 0 0 0;font-size:clamp(24px,4.8vw,40px);line-height:1.2}
+    .hero p{margin:10px auto 0;color:var(--muted);max-width:800px}
+    .cta-hero{margin-top:18px;display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:10px 16px;border-radius:999px;border:1px solid rgba(255,255,255,.18);color:var(--text);text-decoration:none;font-weight:700;background:transparent;transition:.12s ease}
     .btn:hover{transform:translateY(-1px);background:rgba(255,255,255,.06)}
     .btn.primary{background:var(--wa);color:#002b12;border-color:transparent}
     .btn.primary:hover{filter:brightness(0.95)}
+    .btn.mail{background:transparent}
 
-    /* Hero (franja oscura con claim grande) */
-    .hero{background:var(--bg);color:var(--text);padding:32px 20px 48px;border-bottom:1px solid rgba(255,255,255,.08)}
-    .hero .wrap{max-width:1100px;margin:0 auto;text-align:center}
-    .hero h1{margin:10px 0 0 0;font-size:clamp(22px,4vw,36px);line-height:1.2}
-    .hero p{margin:10px auto 0;color:var(--muted);max-width:800px}
-    .hero .cta-hero{margin-top:16px;display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
+    /* Franja de confianza (Naturgy) */
+    .trustbar{background:#0b1220;color:#cbd5e1;border-bottom:1px solid rgba(255,255,255,.06)}
+    .trustbar .wrap{max-width:1100px;margin:0 auto;padding:10px 20px;display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap}
+    .trustbar img{height:22px;width:auto;display:block;filter: saturate(0.95) contrast(1.05)}
+    .trustbar small{opacity:.9}
 
     /* Main cards */
-    main{max-width:1100px;margin:36px auto 0;padding:0 20px}
+    main{max-width:1100px;margin:28px auto 0;padding:0 20px}
     .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
     .card{border:1px solid #e5e7eb;border-radius:16px;padding:22px;background:#fff;box-shadow:0 1px 0 rgba(15,23,42,0.02)}
     .card h2{margin:0 0 10px;font-size:18px}
@@ -55,47 +61,50 @@
     @media (max-width:700px){
       .brand img{height:38px}
     }
-    /* ayuda visual para foco */
     .btn:focus{outline:2px solid #fff;outline-offset:2px}
   </style>
 </head>
 <body>
-  <!-- Header con logo y botones (Mail + WhatsApp) -->
+  <!-- Header SOLO con logo -->
   <header>
     <div class="nav">
       <a class="brand" href="#inicio" aria-label="Ken SRL - Inicio">
         <picture>
           <img
-            src="logo-ken-1x.png?v=8"
-            srcset="logo-ken-2x.png?v=8 2x, logo-ken-1x.png?v=8 1x"
+            src="logo-ken-1x.png?v=10"
+            srcset="logo-ken-2x.png?v=10 2x, logo-ken-1x.png?v=10 1x"
             alt="Ken SRL"
             height="42"
             loading="eager"
             decoding="async"
-            onerror="this.onerror=null; this.src='logo_ken.png?v=8';"
+            onerror="this.onerror=null; this.src='logo_ken.png?v=10';"
           >
         </picture>
       </a>
-      <nav class="cta" aria-label="Acciones">
-        <a class="btn" href="mailto:albertogir@kensrl.com?subject=Consulta%20Ken%20SRL">Enviar mail</a>
-        <a class="btn primary" href="https://wa.me/5493874594914?text=Hola%20Ken%20SRL%2C%20quiero%20solicitar%20un%20presupuesto." target="_blank" rel="noopener">WhatsApp</a>
-      </nav>
     </div>
   </header>
 
-  <!-- Hero con claim principal -->
+  <!-- Hero con los ÚNICOS 2 botones -->
   <section class="hero" id="inicio">
     <div class="wrap">
       <h1>Redes, gasoductos e instalaciones de gas natural</h1>
       <p>Obras seguras, normadas (ENARGAS / NAG) y a tiempo. Dirección técnica habilitada y presupuestos claros.</p>
       <div class="cta-hero">
         <a class="btn primary" href="https://wa.me/5493874594914?text=Hola%20Ken%20SRL%2C%20quiero%20solicitar%20un%20presupuesto." target="_blank" rel="noopener">Escribinos por WhatsApp</a>
-        <a class="btn" href="mailto:albertogir@kensrl.com?subject=Consulta%20Ken%20SRL">Enviar mail</a>
+        <a class="btn mail" href="mailto:albertogir@kensrl.com?subject=Consulta%20Ken%20SRL">Enviar mail</a>
       </div>
     </div>
   </section>
 
-  <!-- Contenido principal (3 tarjetas) -->
+  <!-- Franja Naturgy -->
+  <div class="trustbar">
+    <div class="wrap" aria-label="Acreditaciones y habilitaciones">
+      <small>Empresa habilitada por</small>
+      <img src="naturgy-logo.png?v=10" alt="Naturgy" loading="lazy" decoding="async">
+    </div>
+  </div>
+
+  <!-- Contenido principal (3 tarjetas, sin botones extra) -->
   <main>
     <section class="grid">
       <article class="card">
@@ -115,10 +124,7 @@
           Email alternativo: <a href="mailto:albertogir@kensrl.com">albertogir@kensrl.com</a><br>
           Tel: +54 9 387 459 4914
         </p>
-        <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap">
-          <a class="btn primary" href="https://wa.me/5493874594914?text=Hola%20Ken%20SRL%2C%20quiero%20solicitar%20un%20presupuesto." target="_blank" rel="noopener">WhatsApp</a>
-          <a class="btn" href="mailto:albertogir@kensrl.com?subject=Consulta%20Ken%20SRL">Enviar mail</a>
-        </div>
+        <!-- Sin botones aquí para evitar duplicados -->
       </article>
     </section>
   </main>
