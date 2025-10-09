@@ -37,7 +37,7 @@
     .hero-inner{max-width:var(--maxw);margin:0 auto}
     .brand{display:flex; align-items:center; justify-content:center; gap:18px;}
     .brand img{
-      height:150px;          /* Logo Ken grande */
+      height:150px;
       width:auto;
       display:block;
       filter:drop-shadow(0 4px 10px rgba(0,0,0,.3));
@@ -50,8 +50,10 @@
     }
     .title{font-size: clamp(28px, 3.2vw, 44px); font-weight:800; margin:20px 0 8px; letter-spacing:.2px;}
     .subtitle{margin:0 auto; max-width: 900px; color:#c9d6f3; font-size: clamp(14px, 1.8vw, 18px);}
+
     .main{background:#fff; color:var(--text-dark); border-top-left-radius:28px; border-top-right-radius:28px; margin-top:28px; padding: 38px 24px 24px;}
     .container{max-width:var(--maxw);margin:0 auto}
+
     .cards{display:grid; grid-template-columns: repeat(3, 1fr); gap:22px;}
     @media (max-width:980px){ .cards{grid-template-columns:1fr 1fr} }
     @media (max-width:640px){ .cards{grid-template-columns:1fr} }
@@ -60,15 +62,77 @@
     .card p{margin:0;color:#374151}
     .contact p a{color:var(--primary); text-decoration:none}
     .contact p a:hover{ text-decoration:underline }
+
     .btn{display:inline-flex; align-items:center; justify-content:center; gap:10px; padding:12px 16px; border-radius:12px; font-weight:700; text-decoration:none; transition:transform .06s ease, box-shadow .2s ease, filter .2s ease; box-shadow:var(--shadow-soft); border:1px solid rgba(0,0,0,.04); width:100%;}
     .btn:hover{transform:translateY(-1px)}
     .btn:active{transform:translateY(0)}
     .btn-wpp{background:var(--wpp); color:#06280f}
     .btn-mail{background:var(--mail); color:#fff}
     .btn + .btn{margin-top:10px}
+
+    /* -------- Antecedentes -------- */
+    .section{margin-top:38px;}
+    .section h2{
+      font-size: clamp(22px, 2.4vw, 28px);
+      margin: 0 0 12px;
+      font-weight:800;
+      letter-spacing:.2px;
+      color:#0b1220;
+    }
+    .section p.section-sub{
+      margin: 0 0 18px;
+      color:#4b5563;
+    }
+    .table-wrap{
+      background:#fff;
+      border:1px solid #e5e7eb;
+      border-radius:16px;
+      box-shadow:var(--shadow-soft);
+      overflow:hidden;
+    }
+    .table-scroll{
+      width:100%;
+      overflow:auto;
+    }
+    table{
+      width:100%;
+      border-collapse:separate;
+      border-spacing:0;
+      min-width:760px; /* scroll en móviles */
+      font-size:15px;
+    }
+    thead th{
+      position:sticky; top:0; z-index:1;
+      background:#f8fafc;
+      color:#0b1220;
+      text-align:left;
+      padding:14px 14px;
+      border-bottom:1px solid #e5e7eb;
+      font-weight:700;
+    }
+    tbody td{
+      padding:14px;
+      border-bottom:1px solid #eef2f7;
+      vertical-align:top;
+      color:#1f2937;
+    }
+    tbody tr:nth-child(odd){ background:#fcfdff; }
+    tbody tr:hover{ background:#f5f7fb; }
+
+    .pill{
+      display:inline-block;
+      padding:6px 10px;
+      border-radius:999px;
+      background:#edf2ff;
+      color:#1f3a8a;
+      font-weight:600;
+      font-size:13px;
+      border:1px solid #e0e7ff;
+    }
+
     .naturgy{display:flex; align-items:center; justify-content:center; gap:12px; margin:34px auto 8px; padding-top:10px; border-top:1px dashed #e5e7eb; color:#4b5563; max-width:var(--maxw);}
     .naturgy img{
-      height:48px;          /* Logo Naturgy más grande */
+      height:48px;
       width:auto;
       display:block;
     }
@@ -149,16 +213,118 @@
         </article>
       </section>
 
-    <!-- NATURGY -->
-<div class="naturgy">
-  <span>Empresa habilitada por </span>
-  <img src="./naturgy-logo.png" alt="Naturgy" loading="lazy" decoding="async" style="width:50%; height:auto;">
-</div>
+      <!-- ===== ANTECEDENTES ===== -->
+      <section id="antecedentes" class="section">
+        <h2>Antecedentes</h2>
+        <p class="section-sub">Algunos de nuestros trabajos recientes y emblemáticos.</p>
 
-    <!-- FOOTER -->
-    <footer>
-      © 2025 Ken SRL — <a href="https://kensrl.com" target="_blank" rel="noopener">kensrl.com</a>
-    </footer>
+        <div class="table-wrap">
+          <div class="table-scroll">
+            <table aria-label="Antecedentes de obras y clientes">
+              <thead>
+                <tr>
+                  <th style="width:60%">Denominación y ubicación de la obra</th>
+                  <th style="width:40%">Cliente</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Ejecución de instalaciones internas de gas en instituciones educativas y sociales de la Provincia de Salta</td>
+                  <td><span class="pill">Recursos Energéticos y Mineros de Salta S.A.</span></td>
+                </tr>
+                <tr>
+                  <td>Ampliación de redes de Gas Natural de la Ciudad de Salta — Grupo 4</td>
+                  <td><span class="pill">Secretaría de Obras Públicas de la Provincia de Salta</span></td>
+                </tr>
+                <tr>
+                  <td>Refacción del sistema de calderas en Hogar Escuela N.º 4660 — Salta Capital</td>
+                  <td><span class="pill">Secretaría de Obras Públicas de la Provincia de Salta</span></td>
+                </tr>
+                <tr>
+                  <td>Extensión de la red de media presión e instalación de servicios integrales con gabinetes en Colonia Santa Rosa — Salta</td>
+                  <td><span class="pill">Secretaría de Obras Públicas de la Provincia de Salta</span></td>
+                </tr>
+                <tr>
+                  <td>Ampliación de red de gas natural en barrios de Campo Quijano — Salta</td>
+                  <td><span class="pill">Secretaría de Obras Públicas de la Provincia de Salta</span></td>
+                </tr>
+                <tr>
+                  <td>Ampliación de red de gas natural en La Silleta — Salta</td>
+                  <td><span class="pill">Secretaría de Obras Públicas de la Provincia de Salta</span></td>
+                </tr>
+                <tr>
+                  <td>Cambio de traza de gasoducto de media presión (Proyectos Gasnor SPI044, SOR394 y SOR407) — Autopista Pichanal–Orán, Salta</td>
+                  <td><span class="pill">Dycasa S.A.</span></td>
+                </tr>
+                <tr>
+                  <td>Instalación de caldera auxiliar — Parque Industrial de la Ciudad de Salta</td>
+                  <td><span class="pill">Santiago Sáenz S.A.</span></td>
+                </tr>
+                <tr>
+                  <td>Mantenimiento de sistema de protección catódica — General Güemes, Salta</td>
+                  <td><span class="pill">Pampa Energía S.A.</span></td>
+                </tr>
+                <tr>
+                  <td>Interconexión de media presión — El Huaico – Lesser, Salta (Proyecto SS1945)</td>
+                  <td><span class="pill">Gasnor S.A.</span></td>
+                </tr>
+                <tr>
+                  <td>Provisión de sistema de aire comprimido — Laboratorio Layston, Salta</td>
+                  <td><span class="pill">Las Cortes S.R.L.</span></td>
+                </tr>
+                <tr>
+                  <td>Regularización de instalación de gas — Planta en Parque Industrial Salta</td>
+                  <td><span class="pill">Establecimiento del Tuyú S.R.L.</span></td>
+                </tr>
+                <tr>
+                  <td>Abastecimiento de agua — Proyecto Aguas del Norte 2684, General Güemes (Salta)</td>
+                  <td><span class="pill">Sion S.R.L.</span></td>
+                </tr>
+                <tr>
+                  <td>Servicio segunda etapa litio — Ingeniería de detalle, Palmar Largo (Formosa)</td>
+                  <td><span class="pill">Recurso y Energía Formosa S.A.</span></td>
+                </tr>
+                <tr>
+                  <td>Mantenimiento de caldera y reemplazo de piezas — Central Térmica Güemes, Salta</td>
+                  <td><span class="pill">Pampa Energía S.A.</span></td>
+                </tr>
+                <tr>
+                  <td>Traslado e instalación de estufas tabacaleras — Rosario de Lerma, Salta</td>
+                  <td><span class="pill">Rafael Ángel Cadena</span></td>
+                </tr>
+                <tr>
+                  <td>Modificación de traza de red PEAD 125 mm — Cruce Grand Bourg, Salta (Proyecto Gasnor 14458)</td>
+                  <td><span class="pill">UTE Ing. Medina S.A. – Vicente Moncho Construcciones S.A.</span></td>
+                </tr>
+                <tr>
+                  <td>Gasoducto y red de distribución domiciliaria — Parque Industrial y Zona Franca, Perico (Jujuy)</td>
+                  <td><span class="pill">Ministerio de Infraestructura y Servicios Públicos de Jujuy</span></td>
+                </tr>
+                <tr>
+                  <td>Provisión de gas natural (conexión a gasoducto troncal, PR y red) — Planta de producción de carbonato de litio, Gral. Güemes (Salta)</td>
+                  <td><span class="pill">Litio Minera Argentina S.A. – Ganfeng Lithium</span></td>
+                </tr>
+                <tr>
+                  <td>Provisión de gas natural (conexión, PR y red) — Planta de carbonato de litio, Perico (Jujuy)</td>
+                  <td><span class="pill">Tsingshan Mining Development S.A.</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- NATURGY -->
+      <div class="naturgy">
+        <span>Empresa habilitada por </span>
+        <img src="./naturgy-logo.png" alt="Naturgy" loading="lazy" decoding="async" style="width:50%; height:auto;">
+      </div>
+
+      <!-- FOOTER -->
+      <footer>
+        © 2025 Ken SRL — <a href="https://kensrl.com" target="_blank" rel="noopener">kensrl.com</a>
+      </footer>
+    </div>
   </main>
 </body>
 </html>
