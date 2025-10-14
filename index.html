@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ken SRL — Obras de Gas Natural · v4</title>
+  <title>Ken SRL — Obras de Gas Natural · v5</title>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
@@ -66,16 +66,24 @@
     .btn-block{width:100%}
     .btn-primary{background:var(--primary); color:#fff; border-color:transparent}
 
-    /* -------- Antecedentes (oculto por defecto) -------- */
+    /* -------- Secciones -------- */
     .section{margin-top:38px;}
     .section h2{
       font-size: clamp(22px, 2.4vw, 28px);
       margin: 0 0 12px; font-weight:800; letter-spacing:.2px; color:#0b1220;
     }
     .section p.section-sub{ margin: 0 0 18px; color:#4b5563; }
-    /* estado oculto */
+
+    /* -------- Productos & Servicios -------- */
+    .grid-4{display:grid; grid-template-columns: repeat(4,1fr); gap:18px;}
+    @media (max-width:1100px){ .grid-4{grid-template-columns: repeat(2,1fr);} }
+    @media (max-width:640px){ .grid-4{grid-template-columns: 1fr;} }
+    .badge{display:inline-block; background:#e8f1ff; color:#0b3b8f; border:1px solid #c7dcff; padding:4px 10px; border-radius:999px; font-size:12px; font-weight:700; margin-bottom:8px;}
+    .list{margin:8px 0 0 18px; color:#4b5563}
+    .list li{margin:6px 0}
+
+    /* -------- Antecedentes (oculto por defecto) -------- */
     #antecedentes[data-visible="false"]{ display:none; }
-    /* estado visible */
     #antecedentes[data-visible="true"]{ display:block; }
 
     .table-wrap{ background:#fff; border:1px solid #e5e7eb; border-radius:12px; }
@@ -120,6 +128,7 @@
   <!-- CUERPO BLANCO -->
   <main class="main">
     <div class="container">
+      <!-- Intro 3 tarjetas -->
       <section class="cards">
         <article class="card">
           <h3>Qué hacemos</h3>
@@ -145,6 +154,86 @@
             Enviar mail
           </a>
         </article>
+      </section>
+
+      <!-- ===== NUEVO: Productos & Servicios ===== -->
+      <section id="servicios" class="section">
+        <h2>Productos & Servicios</h2>
+        <p class="section-sub">Ciclo completo para obras de gas natural. Podés contratar cada etapa por separado o el paquete llave en mano.</p>
+
+        <div class="grid-4">
+          <!-- Proyecto -->
+          <article class="card">
+            <span class="badge">Proyecto</span>
+            <h3>Anteproyecto y Permisos</h3>
+            <p>Relevamiento, factibilidad y tramitaciones para habilitaciones.</p>
+            <ul class="list">
+              <li>Relevamiento de campo y diagnóstico.</li>
+              <li>Gestión de factibilidad y permisos municipales/provinciales.</li>
+              <li>Plan de obra preliminar y estimación de costos.</li>
+            </ul>
+            <p style="margin-top:10px"><a href="#detalle">Ver detalle →</a></p>
+          </article>
+
+          <!-- Ingeniería -->
+          <article class="card">
+            <span class="badge">Ingeniería</span>
+            <h3>Ingeniería de Detalle</h3>
+            <p>Cálculos, memorias y especificaciones conforme normativa.</p>
+            <ul class="list">
+              <li>Cálculo hidráulico y de capacidad.</li>
+              <li>Memoria técnica y pliegos de especificaciones.</li>
+              <li>Plan de ensayos y control de calidad (QA/QC).</li>
+            </ul>
+            <p style="margin-top:10px"><a href="#detalle">Ver detalle →</a></p>
+          </article>
+
+          <!-- Diseño -->
+          <article class="card">
+            <span class="badge">Diseño</span>
+            <h3>Planos y Materiales</h3>
+            <p>Documentación ejecutiva y listado de materiales.</p>
+            <ul class="list">
+              <li>Planos ejecutivos (traza, cámaras, válvulas, acometidas).</li>
+              <li>Cómputo y métricas de materiales (PEAD, válvulas, fittings).</li>
+              <li>Presupuesto y cronograma base (Gantt).</li>
+            </ul>
+            <p style="margin-top:10px"><a href="#detalle">Ver detalle →</a></p>
+          </article>
+
+          <!-- Ejecución -->
+          <article class="card">
+            <span class="badge">Ejecución</span>
+            <h3>Obra y Puesta en Servicio</h3>
+            <p>Construcción integral con dirección técnica y seguridad.</p>
+            <ul class="list">
+              <li>Apertura y zanjeo, soldadura/termofusión y tapada.</li>
+              <li>Pruebas de presión, purga y puesta en servicio.</li>
+              <li>Libro de obra, as-built y entrega a distribuidora.</li>
+            </ul>
+            <p style="margin-top:10px"><a href="#detalle">Ver detalle →</a></p>
+          </article>
+        </div>
+      </section>
+
+      <!-- ===== NUEVO: Detalle de Alcances & Entregables ===== -->
+      <section id="detalle" class="section">
+        <h2>Detalle de Alcances & Entregables</h2>
+        <div class="table-wrap">
+          <div class="table-scroll">
+            <table aria-label="Detalle de etapas y entregables">
+              <thead>
+                <tr><th>Etapa</th><th>Entregables</th><th>Plazo típico</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Proyecto</td><td>Informe de relevamiento, plano base, carpeta de factibilidad</td><td>1–3 semanas</td></tr>
+                <tr><td>Ingeniería</td><td>Memoria de cálculo, pliegos, plan de ensayos QA/QC</td><td>2–4 semanas</td></tr>
+                <tr><td>Diseño</td><td>Planos ejecutivos, cómputo y presupuesto, cronograma</td><td>2–3 semanas</td></tr>
+                <tr><td>Ejecución</td><td>Obra, ensayos, as-built, documentación de entrega</td><td>Según magnitud</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
       </section>
 
       <!-- Botón para mostrar antecedentes -->
@@ -216,7 +305,7 @@
 
   <!-- JS: mostrar antecedentes al click y hacer scroll -->
   <script>
-    const VERSION = "v4";
+    const VERSION = "v5";
     console.log("KEN SRL build:", VERSION);
     if (!document.title.includes("· " + VERSION)) document.title += " · " + VERSION;
 
@@ -224,16 +313,11 @@
     const sec = document.getElementById("antecedentes");
     if (btn && sec) {
       btn.addEventListener("click", function (e) {
-        // permitir ancla pero asegurar visibilidad
         sec.setAttribute("data-visible", "true");
         sec.removeAttribute("aria-hidden");
-        // scroll suave (por si el navegador ignora el ancla)
         setTimeout(() => sec.scrollIntoView({behavior:"smooth", block:"start"}), 0);
       });
     }
   </script>
-</body>
-</html>
-
 </body>
 </html>
