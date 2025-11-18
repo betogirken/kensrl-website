@@ -21,73 +21,294 @@
       --shadow-soft:0 6px 18px rgba(0,0,0,.10);
     }
     *{box-sizing:border-box}
-    html,body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial,'Noto Sans',sans-serif;color:var(--text-dark);background:#f6f7fb}
+    html,body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial,'Noto Sans',sans-serif;
+      color:var(--text-dark);
+      background:#f6f7fb
+    }
     a{color:inherit;text-decoration:none}
 
     /* NAV */
-    .nav{position:sticky;top:0;z-index:50;background:rgba(14,17,23,.9);backdrop-filter:saturate(160%) blur(8px);}
-    .nav-wrap{max-width:1120px;margin:auto;display:flex;align-items:center;gap:16px;padding:12px 16px}
+    .nav{
+      position:sticky;
+      top:0;
+      z-index:50;
+      background:rgba(14,17,23,.9);
+      backdrop-filter:saturate(160%) blur(8px);
+    }
+    .nav-wrap{
+      max-width:1120px;
+      margin:auto;
+      display:flex;
+      align-items:center;
+      gap:16px;
+      padding:12px 16px
+    }
     .brand{display:flex;align-items:center}
-    .brand img{height:64px;width:auto;display:block;border-radius:6px}
-    @media (max-width:640px){ .brand img{height:56px} }
-    .nav-links{margin-left:auto;display:flex;gap:18px}
-    .nav-links a{color:#cbd5e1;font-weight:600;padding:8px 10px;border-radius:10px}
-    .nav-links a:hover{background:rgba(255,255,255,.08);color:#fff}
+    .brand img{
+      height:64px;
+      width:auto;
+      display:block;
+      border-radius:6px
+    }
+    @media (max-width:640px){
+      .brand img{height:56px}
+    }
+    .nav-links{
+      margin-left:auto;
+      display:flex;
+      gap:18px
+    }
+    .nav-links a{
+      color:#cbd5e1;
+      font-weight:600;
+      padding:8px 10px;
+      border-radius:10px
+    }
+    .nav-links a:hover{
+      background:rgba(255,255,255,.08);
+      color:#fff
+    }
+
+    /* Language switch */
+    .lang-switch{
+      display:flex;
+      gap:8px;
+      margin-left:8px;
+    }
+    .lang-btn{
+      background:rgba(255,255,255,.08);
+      border:none;
+      padding:6px 10px;
+      border-radius:8px;
+      color:#cbd5e1;
+      font-weight:600;
+      cursor:pointer;
+      font-size:13px;
+    }
+    .lang-btn.active{
+      background:var(--primary);
+      color:white;
+    }
 
     /* HERO oscuro */
-    .hero{background:linear-gradient(180deg, var(--bg-dark) 0%, #111827 100%);color:var(--text-light)}
-    .hero-wrap{max-width:1120px;margin:auto;padding:56px 16px 36px;display:grid;grid-template-columns:1fr;gap:20px}
-    .hero h1{margin:0 0 10px 0;font-size:40px;line-height:1.1}
-    .hero p{margin:0 0 18px 0;color:#cbd5e1}
-    .cta{display:flex;gap:12px;flex-wrap:wrap}
-    .btn{display:inline-flex;align-items:center;gap:8px;font-weight:700;padding:12px 16px;border-radius:12px;box-shadow:var(--shadow)}
-    .btn-wpp{background:var(--wpp);color:#052e12}
-    .btn-mail{background:var(--primary);color:white}
+    .hero{
+      background:linear-gradient(180deg, var(--bg-dark) 0%, #111827 100%);
+      color:var(--text-light)
+    }
+    .hero-wrap{
+      max-width:1120px;
+      margin:auto;
+      padding:56px 16px 36px;
+      display:grid;
+      grid-template-columns:1fr;
+      gap:20px
+    }
+    .hero h1{
+      margin:0 0 10px 0;
+      font-size:40px;
+      line-height:1.1
+    }
+    .hero p{
+      margin:0 0 18px 0;
+      color:#cbd5e1
+    }
+    .cta{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap
+    }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      font-weight:700;
+      padding:12px 16px;
+      border-radius:12px;
+      box-shadow:var(--shadow)
+    }
+    .btn-wpp{
+      background:var(--wpp);
+      color:#052e12
+    }
+    .btn-mail{
+      background:var(--primary);
+      color:white
+    }
 
     /* Sección Productos & Servicios */
-    .section{max-width:1120px;margin:40px auto;padding:0 16px}
-    .section h2{font-size:32px;margin:0 0 12px 0}
-    .section p.lead{color:#4b5563;margin:0 0 20px 0}
+    .section{
+      max-width:1120px;
+      margin:40px auto;
+      padding:0 16px
+    }
+    .section h2{
+      font-size:32px;
+      margin:0 0 12px 0
+    }
+    .section p.lead{
+      color:#4b5563;
+      margin:0 0 20px 0
+    }
+    .section-sub{
+      color:#4b5563;
+      margin:0 0 20px 0;
+      font-size:15px;
+    }
 
-    .grid{display:grid;gap:18px}
-    @media(min-width:900px){.grid{grid-template-columns:repeat(4,1fr)}}
+    .grid{
+      display:grid;
+      gap:18px
+    }
+    @media(min-width:900px){
+      .grid{grid-template-columns:repeat(4,1fr)}
+    }
 
-    .card{background:var(--bg-card);border-radius:18px;box-shadow:var(--shadow);padding:18px;border:1px solid #eef2f7}
+    .card{
+      background:var(--bg-card);
+      border-radius:18px;
+      box-shadow:var(--shadow);
+      padding:18px;
+      border:1px solid #eef2f7
+    }
     .card h3{margin:0 0 8px 0}
-    .card p{margin:0 0 12px 0;color:#4b5563}
-    .badge{display:inline-block;background:#e8f1ff;color:#0b3b8f;border:1px solid #c7dcff;padding:4px 8px;border-radius:999px;font-size:12px;font-weight:700}
-    .list{margin:0;padding-left:18px;color:#4b5563}
+    .card p{
+      margin:0 0 12px 0;
+      color:#4b5563
+    }
+    .badge{
+      display:inline-block;
+      background:#e8f1ff;
+      color:#0b3b8f;
+      border:1px solid #c7dcff;
+      padding:4px 8px;
+      border-radius:999px;
+      font-size:12px;
+      font-weight:700
+    }
+    .list{
+      margin:0;
+      padding-left:18px;
+      color:#4b5563
+    }
     .list li{margin:6px 0}
 
-    .split{display:grid;gap:16px}
-    @media(min-width:900px){.split{grid-template-columns:1.1fr .9fr}}
+    .split{
+      display:grid;
+      gap:16px
+    }
+    @media(min-width:900px){
+      .split{grid-template-columns:1.1fr .9fr}
+    }
 
-    .table{width:100%;border-collapse:collapse;background:#fff;border-radius:14px;overflow:hidden;box-shadow:var(--shadow)}
-    .table th,.table td{padding:12px 14px;border-bottom:1px solid #eef2f7;text-align:left;font-size:14px}
+    .table{
+      width:100%;
+      border-collapse:collapse;
+      background:#fff;
+      border-radius:14px;
+      overflow:hidden;
+      box-shadow:var(--shadow)
+    }
+    .table th,.table td{
+      padding:12px 14px;
+      border-bottom:1px solid #eef2f7;
+      text-align:left;
+      font-size:14px
+    }
     .table th{background:#f3f6fb}
 
     /* Footer / Naturgy */
-    .footer{margin-top:40px;background:#fff;border-top:1px solid #e5e7eb}
-    .footer-wrap{max-width:1120px;margin:auto;padding:22px 16px;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between}
-    .naturgy{display:flex;align-items:center;gap:10px;color:#4b5563}
-    .naturgy img{height:64px;width:auto;display:block}
-    @media (max-width:640px){ .naturgy img{height:48px} }
+    .footer{
+      margin-top:40px;
+      background:#fff;
+      border-top:1px solid #e5e7eb
+    }
+    .footer-wrap{
+      max-width:1120px;
+      margin:auto;
+      padding:22px 16px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:16px;
+      align-items:center;
+      justify-content:space-between
+    }
+    .naturgy{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      color:#4b5563
+    }
+    .naturgy img{
+      height:64px;
+      width:auto;
+      display:block
+    }
+    @media (max-width:640px){
+      .naturgy img{height:48px}
+    }
 
     /* Galería */
-    .gallery{display:grid;gap:12px;grid-template-columns:repeat(3,1fr)}
-    @media (max-width:1000px){.gallery{grid-template-columns:repeat(2,1fr)}}
-    @media (max-width:640px){.gallery{grid-template-columns:1fr}}
-    .gallery figure{margin:0;border:1px solid #e5e7eb;border-radius:14px;overflow:hidden;background:#fff;box-shadow:var(--shadow-soft)}
-    .gallery img{width:100%;height:220px;object-fit:cover;display:block}
-    .gallery figcaption{padding:10px 12px;color:#4b5563;font-size:13px}
+    .gallery{
+      display:grid;
+      gap:12px;
+      grid-template-columns:repeat(3,1fr)
+    }
+    @media (max-width:1000px){
+      .gallery{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:640px){
+      .gallery{grid-template-columns:1fr}
+    }
+    .gallery figure{
+      margin:0;
+      border:1px solid #e5e7eb;
+      border-radius:14px;
+      overflow:hidden;
+      background:#fff;
+      box-shadow:var(--shadow-soft)
+    }
+    .gallery img{
+      width:100%;
+      height:220px;
+      object-fit:cover;
+      display:block
+    }
+    .gallery figcaption{
+      padding:10px 12px;
+      color:#4b5563;
+      font-size:13px
+    }
     .gallery figcaption strong{color:#0b1220}
 
     /* Lightbox */
-    dialog#lightbox{border:none;border-radius:12px;padding:0;max-width:96vw;max-height:90vh}
+    dialog#lightbox{
+      border:none;
+      border-radius:12px;
+      padding:0;
+      max-width:96vw;
+      max-height:90vh
+    }
     dialog#lightbox::backdrop{background:rgba(0,0,0,.6)}
     .lightbox-wrap{position:relative}
-    .lightbox-wrap img{max-width:96vw;max-height:90vh;display:block}
-    .lightbox-close{position:absolute;top:8px;right:8px;background:#111827;color:#fff;border:none;border-radius:10px;padding:6px 10px;cursor:pointer;font-weight:700}
+    .lightbox-wrap img{
+      max-width:96vw;
+      max-height:90vh;
+      display:block
+    }
+    .lightbox-close{
+      position:absolute;
+      top:8px;
+      right:8px;
+      background:#111827;
+      color:#fff;
+      border:none;
+      border-radius:10px;
+      padding:6px 10px;
+      cursor:pointer;
+      font-weight:700
+    }
   </style>
 </head>
 <body>
@@ -103,11 +324,27 @@
           decoding="async">
       </a>
       <nav class="nav-links">
-        <a href="#inicio">Inicio</a>
-        <a href="#servicios">Productos & Servicios</a>
-        <a href="#detalle">Detalle</a>
-        <a href="#contacto">Contacto</a>
+        <a href="#inicio">
+          <span data-lang="es">Inicio</span>
+          <span data-lang="en">Home</span>
+        </a>
+        <a href="#servicios">
+          <span data-lang="es">Productos &amp; Servicios</span>
+          <span data-lang="en">Products &amp; Services</span>
+        </a>
+        <a href="#detalle">
+          <span data-lang="es">Detalle</span>
+          <span data-lang="en">Scope</span>
+        </a>
+        <a href="#contacto">
+          <span data-lang="es">Contacto</span>
+          <span data-lang="en">Contact</span>
+        </a>
       </nav>
+      <div class="lang-switch">
+        <button onclick="setLang('es')" class="lang-btn" id="btn-es">ES</button>
+        <button onclick="setLang('en')" class="lang-btn" id="btn-en">EN</button>
+      </div>
     </div>
   </header>
 
@@ -115,14 +352,22 @@
   <section id="inicio" class="hero">
     <div class="hero-wrap">
       <div>
-        <h1>Gas natural: proyecto, ingeniería, diseño y ejecución</h1>
-        <p>Redes, gasoductos e instalaciones. Soluciones llave en mano para barrios, industrias y comercios en el NOA.</p>
+        <h1 data-lang="es">Gas natural: proyecto, ingeniería, diseño y ejecución</h1>
+        <h1 data-lang="en">Natural gas: project, engineering, design and construction</h1>
+
+        <p data-lang="es">Redes, gasoductos e instalaciones. Soluciones llave en mano para barrios, industrias y comercios en el NOA.</p>
+        <p data-lang="en">Networks, pipelines and installations. Turnkey solutions for neighborhoods, industries and businesses in Northwestern Argentina (NOA).</p>
+
         <div class="cta">
           <a class="btn btn-wpp" href="https://wa.me/5493874594914" target="_blank" rel="noopener">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.86 11.86 0 0 0 12.06 0 11.94 11.94 0 0 0 .11 12a11.7 11.7 0 0 0 1.77 6.2L0 24l6-1.84a11.9 11.9 0 0 0 6 1.61h.05A11.94 11.94 0 0 0 24 11.94a11.85 11.85 0 0 0-3.48-8.46ZM12.05 22a10 10 0 0 1-5.1-1.39l-.37-.22-3.55 1.08 1.1-3.46-.24-.36A10 10 0 1 1 12.05 22Zm5.64-7.51c-.31-.15-1.86-.92-2.15-1s-.5-.15-.71.15-.82 1-.99 1.2-.36.22-.66.07a8.17 8.17 0 0 1-2.4-1.48 9 9 0 0 1-1.65-2c-.17-.31 0-.47.13-.62s.31-.36.47-.55a2.06 2.06 0 0 0 .31-.52.56.56 0 0 0 0-.55c0-.15-.71-1.7-1-2.34s-.53-.52-.71-.52h-.61a1.17 1.17 0 0 0-.84.39 3.52 3.52 0 0 0-1.1 2.61 6.13 6.13 0 0 0 1.27 3.26 13.95 13.95 0 0 0 5.35 5 18.36 18.36 0 0 0 1.86.69 4.46 4.46 0 0 0 2 .13 3.3 3.3 0 0 0 2.17-1.51 2.7 2.7 0 0 0 .19-1.51c-.1-.09-.29-.14-.6-.29Z"/></svg>
-            WhatsApp
+            <span data-lang="es">WhatsApp</span>
+            <span data-lang="en">WhatsApp</span>
           </a>
-          <a class="btn btn-mail" href="mailto:albertogir@kensrl.com" target="_blank" rel="noopener">Enviar mail</a>
+          <a class="btn btn-mail" href="mailto:albertogir@kensrl.com" target="_blank" rel="noopener">
+            <span data-lang="es">Enviar mail</span>
+            <span data-lang="en">Send email</span>
+          </a>
         </div>
       </div>
     </div>
@@ -130,84 +375,234 @@
 
   <!-- PRODUCTOS & SERVICIOS -->
   <section id="servicios" class="section">
-    <h2>Productos & Servicios</h2>
-    <p class="lead">Ofrecemos el ciclo completo para obras de gas natural. Podés contratar cada etapa por separado o el paquete llave en mano.</p>
+    <h2>
+      <span data-lang="es">Productos &amp; Servicios</span>
+      <span data-lang="en">Products &amp; Services</span>
+    </h2>
+    <p class="lead" data-lang="es">Ofrecemos el ciclo completo para obras de gas natural. Podés contratar cada etapa por separado o el paquete llave en mano.</p>
+    <p class="lead" data-lang="en">We offer the full cycle for natural gas projects. You can hire each phase separately or choose a turnkey package.</p>
 
     <div class="grid">
       <article class="card">
-        <span class="badge">Proyecto</span>
-        <h3>Anteproyecto y Permisos</h3>
-        <p>Relevamiento, factibilidad y tramitaciones para habilitaciones.</p>
+        <span class="badge" data-lang="es">Proyecto</span>
+        <span class="badge" data-lang="en">Project</span>
+
+        <h3 data-lang="es">Anteproyecto y Permisos</h3>
+        <h3 data-lang="en">Preliminary design and Permits</h3>
+
+        <p data-lang="es">Relevamiento, factibilidad y tramitaciones para habilitaciones.</p>
+        <p data-lang="en">Site survey, feasibility and permitting for approvals.</p>
+
         <ul class="list">
-          <li>Relevamiento de campo y diagnóstico.</li>
-          <li>Gestión de factibilidad y permisos municipales/provinciales.</li>
-          <li>Plan de obra preliminar y estimación de costos.</li>
+          <li data-lang="es">Relevamiento de campo y diagnóstico.</li>
+          <li data-lang="en">Field survey and initial diagnosis.</li>
+
+          <li data-lang="es">Gestión de factibilidad y permisos municipales/provinciales.</li>
+          <li data-lang="en">Feasibility management and municipal/provincial permits.</li>
+
+          <li data-lang="es">Plan de obra preliminar y estimación de costos.</li>
+          <li data-lang="en">Preliminary work plan and cost estimate.</li>
         </ul>
-        <p><a href="#detalle-proyecto">Ver detalle →</a></p>
+        <p>
+          <a href="#detalle-proyecto">
+            <span data-lang="es">Ver detalle →</span>
+            <span data-lang="en">See details →</span>
+          </a>
+        </p>
       </article>
 
       <article class="card">
-        <span class="badge">Ingeniería</span>
-        <h3>Ingeniería de Detalle</h3>
-        <p>Cálculos, memorias y especificaciones conforme normativa.</p>
+        <span class="badge" data-lang="es">Ingeniería</span>
+        <span class="badge" data-lang="en">Engineering</span>
+
+        <h3 data-lang="es">Ingeniería de Detalle</h3>
+        <h3 data-lang="en">Detailed Engineering</h3>
+
+        <p data-lang="es">Cálculos, memorias y especificaciones conforme normativa.</p>
+        <p data-lang="en">Calculations, reports and specifications according to standards.</p>
+
         <ul class="list">
-          <li>Cálculo hidráulico y de capacidad.</li>
-          <li>Memoria técnica y pliegos de especificaciones.</li>
-          <li>Plan de ensayos y control de calidad (QA/QC).</li>
+          <li data-lang="es">Cálculo hidráulico y de capacidad.</li>
+          <li data-lang="en">Hydraulic and capacity calculations.</li>
+
+          <li data-lang="es">Memoria técnica y pliegos de especificaciones.</li>
+          <li data-lang="en">Technical reports and specification documents.</li>
+
+          <li data-lang="es">Plan de ensayos y control de calidad (QA/QC).</li>
+          <li data-lang="en">Testing plan and quality assurance/control (QA/QC).</li>
         </ul>
-        <p><a href="#detalle-ingenieria">Ver detalle →</a></p>
+        <p>
+          <a href="#detalle-ingenieria">
+            <span data-lang="es">Ver detalle →</span>
+            <span data-lang="en">See details →</span>
+          </a>
+        </p>
       </article>
 
       <article class="card">
-        <span class="badge">Diseño</span>
-        <h3>Planos y Materiales</h3>
-        <p>Documentación ejecutiva y listado de materiales.</p>
+        <span class="badge" data-lang="es">Diseño</span>
+        <span class="badge" data-lang="en">Design</span>
+
+        <h3 data-lang="es">Planos y Materiales</h3>
+        <h3 data-lang="en">Drawings and Materials</h3>
+
+        <p data-lang="es">Documentación ejecutiva y listado de materiales.</p>
+        <p data-lang="en">Construction documents and bill of materials.</p>
+
         <ul class="list">
-          <li>Planos ejecutivos (traza, cámaras, válvulas, acometidas).</li>
-          <li>Métricas y cómputo de materiales (PEAD, válvulas, fittings).</li>
-          <li>Presupuesto y cronograma base (Gantt).</li>
+          <li data-lang="es">Planos ejecutivos (traza, cámaras, válvulas, acometidas).</li>
+          <li data-lang="en">Construction drawings (route, pits, valves, connections).</li>
+
+          <li data-lang="es">Métricas y cómputo de materiales (PEAD, válvulas, fittings).</li>
+          <li data-lang="en">Quantities and bill of materials (HDPE, valves, fittings).</li>
+
+          <li data-lang="es">Presupuesto y cronograma base (Gantt).</li>
+          <li data-lang="en">Budget and baseline schedule (Gantt).</li>
         </ul>
-        <p><a href="#detalle-diseno">Ver detalle →</a></p>
+        <p>
+          <a href="#detalle-diseno">
+            <span data-lang="es">Ver detalle →</span>
+            <span data-lang="en">See details →</span>
+          </a>
+        </p>
       </article>
 
       <article class="card">
-        <span class="badge">Ejecución</span>
-        <h3>Obra y Puesta en Servicio</h3>
-        <p>Construcción integral con dirección técnica y seguridad.</p>
+        <span class="badge" data-lang="es">Ejecución</span>
+        <span class="badge" data-lang="en">Construction</span>
+
+        <h3 data-lang="es">Obra y Puesta en Servicio</h3>
+        <h3 data-lang="en">Construction and Commissioning</h3>
+
+        <p data-lang="es">Construcción integral con dirección técnica y seguridad.</p>
+        <p data-lang="en">Full construction with technical supervision and safety.</p>
+
         <ul class="list">
-          <li>Apertura y zanjeo, soldadura/termofusión y tapada.</li>
-          <li>Pruebas de presión, purga y puesta en servicio.</li>
-          <li>Libro de obra, as-built y entrega a distribuidora.</li>
+          <li data-lang="es">Apertura y zanjeo, soldadura/termofusión y tapada.</li>
+          <li data-lang="en">Trenching, welding/fusion and backfilling.</li>
+
+          <li data-lang="es">Pruebas de presión, purga y puesta en servicio.</li>
+          <li data-lang="en">Pressure tests, purging and commissioning.</li>
+
+          <li data-lang="es">Libro de obra, as-built y entrega a distribuidora.</li>
+          <li data-lang="en">As-built documentation and handover to distributor.</li>
         </ul>
-        <p><a href="#detalle-ejecucion">Ver detalle →</a></p>
+        <p>
+          <a href="#detalle-ejecucion">
+            <span data-lang="es">Ver detalle →</span>
+            <span data-lang="en">See details →</span>
+          </a>
+        </p>
       </article>
     </div>
   </section>
 
   <!-- DETALLE -->
   <section id="detalle" class="section">
-    <h2>Detalle de Alcances & Entregables</h2>
+    <h2>
+      <span data-lang="es">Detalle de Alcances &amp; Entregables</span>
+      <span data-lang="en">Scope and Deliverables</span>
+    </h2>
     <div class="split">
       <div>
         <table class="table" id="detalle-proyecto">
-          <thead><tr><th>Etapa</th><th>Entregables</th><th>Plazo típico</th></tr></thead>
+          <thead>
+            <tr>
+              <th>
+                <span data-lang="es">Etapa</span>
+                <span data-lang="en">Phase</span>
+              </th>
+              <th>
+                <span data-lang="es">Entregables</span>
+                <span data-lang="en">Deliverables</span>
+              </th>
+              <th>
+                <span data-lang="es">Plazo típico</span>
+                <span data-lang="en">Typical lead time</span>
+              </th>
+            </tr>
+          </thead>
           <tbody>
-            <tr><td>Proyecto</td><td>Informe de relevamiento, plano base, carpeta de factibilidad</td><td>1–3 semanas</td></tr>
-            <tr id="detalle-ingenieria"><td>Ingeniería</td><td>Memoria de cálculo, pliegos, plan de ensayos QA/QC</td><td>2–4 semanas</td></tr>
-            <tr id="detalle-diseno"><td>Diseño</td><td>Planos ejecutivos, cómputo y presupuesto, cronograma</td><td>2–3 semanas</td></tr>
-            <tr id="detalle-ejecucion"><td>Ejecución</td><td>Obra, ensayos, as-built, documentación de entrega</td><td>Según magnitud</td></tr>
+            <tr>
+              <td>
+                <span data-lang="es">Proyecto</span>
+                <span data-lang="en">Project</span>
+              </td>
+              <td>
+                <span data-lang="es">Informe de relevamiento, plano base, carpeta de factibilidad</span>
+                <span data-lang="en">Survey report, base drawing, feasibility dossier</span>
+              </td>
+              <td>
+                <span data-lang="es">1–3 semanas</span>
+                <span data-lang="en">1–3 weeks</span>
+              </td>
+            </tr>
+            <tr id="detalle-ingenieria">
+              <td>
+                <span data-lang="es">Ingeniería</span>
+                <span data-lang="en">Engineering</span>
+              </td>
+              <td>
+                <span data-lang="es">Memoria de cálculo, pliegos, plan de ensayos QA/QC</span>
+                <span data-lang="en">Calculation report, specs, QA/QC testing plan</span>
+              </td>
+              <td>
+                <span data-lang="es">2–4 semanas</span>
+                <span data-lang="en">2–4 weeks</span>
+              </td>
+            </tr>
+            <tr id="detalle-diseno">
+              <td>
+                <span data-lang="es">Diseño</span>
+                <span data-lang="en">Design</span>
+              </td>
+              <td>
+                <span data-lang="es">Planos ejecutivos, cómputo y presupuesto, cronograma</span>
+                <span data-lang="en">Construction drawings, quantities and budget, schedule</span>
+              </td>
+              <td>
+                <span data-lang="es">2–3 semanas</span>
+                <span data-lang="en">2–3 weeks</span>
+              </td>
+            </tr>
+            <tr id="detalle-ejecucion">
+              <td>
+                <span data-lang="es">Ejecución</span>
+                <span data-lang="en">Construction</span>
+              </td>
+              <td>
+                <span data-lang="es">Obra, ensayos, as-built, documentación de entrega</span>
+                <span data-lang="en">Works, testing, as-built and handover documentation</span>
+              </td>
+              <td>
+                <span data-lang="es">Según magnitud</span>
+                <span data-lang="en">Depends on project size</span>
+              </td>
+            </tr>
           </tbody>
         </table>
       </div>
       <div>
         <div class="card">
-          <h3>Modalidades de contratación</h3>
+          <h3 data-lang="es">Modalidades de contratación</h3>
+          <h3 data-lang="en">Contracting options</h3>
+
           <ul class="list">
-            <li><strong>Llave en mano:</strong> desde factibilidad hasta entrega.</li>
-            <li><strong>Por etapas:</strong> contratá sólo proyecto/ingeniería/diseño/ejecución.</li>
-            <li><strong>Dirección técnica y supervisión:</strong> si ya tenés contratista.</li>
+            <li data-lang="es"><strong>Llave en mano:</strong> desde factibilidad hasta entrega.</li>
+            <li data-lang="en"><strong>Turnkey:</strong> from feasibility to final handover.</li>
+
+            <li data-lang="es"><strong>Por etapas:</strong> contratá sólo proyecto/ingeniería/diseño/ejecución.</li>
+            <li data-lang="en"><strong>By phase:</strong> hire only project/engineering/design/construction.</li>
+
+            <li data-lang="es"><strong>Dirección técnica y supervisión:</strong> si ya tenés contratista.</li>
+            <li data-lang="en"><strong>Technical supervision only:</strong> if you already have a contractor.</li>
           </ul>
-          <p style="margin-top:12px">Cumplimos normativa vigente (ENARGAS, Naturgy) y estándares de seguridad industrial.</p>
+          <p style="margin-top:12px" data-lang="es">
+            Cumplimos normativa vigente (ENARGAS, Naturgy) y estándares de seguridad industrial.
+          </p>
+          <p style="margin-top:12px" data-lang="en">
+            We comply with current regulations (ENARGAS, Naturgy) and industrial safety standards.
+          </p>
         </div>
       </div>
     </div>
@@ -215,59 +610,137 @@
 
   <!-- GALERÍA -->
   <section id="galeria" class="section">
-    <h2>Galería de obras</h2>
-    <p class="section-sub">Imágenes de instalaciones, regulación, PR y obras en campo.</p>
+    <h2>
+      <span data-lang="es">Galería de obras</span>
+      <span data-lang="en">Project Gallery</span>
+    </h2>
+    <p class="section-sub" data-lang="es">Imágenes de instalaciones, regulación, PR y obras en campo.</p>
+    <p class="section-sub" data-lang="en">Images of installations, regulation skids, plants and field works.</p>
+
     <div class="gallery">
       <figure>
         <img src="./20190412_154914.jpg" alt="Conjunto de regulación y medición sobre pared de ladrillo" loading="lazy" decoding="async">
-        <figcaption><strong>Regulación</strong> · conjunto de regulación/medición.</figcaption>
+        <figcaption>
+          <strong data-lang="es">Regulación</strong>
+          <strong data-lang="en">Regulation</strong>
+          <span data-lang="es"> · conjunto de regulación/medición.</span>
+          <span data-lang="en"> · regulation and metering skid.</span>
+        </figcaption>
       </figure>
+
       <figure>
         <img src="./obra5.jpg" alt="Obra con equipo y tanque en campo" loading="lazy" decoding="async">
-        <figcaption><strong>Planta</strong> · obra en campo y montaje.</figcaption>
+        <figcaption>
+          <strong data-lang="es">Planta</strong>
+          <strong data-lang="en">Plant</strong>
+          <span data-lang="es"> · obra en campo y montaje.</span>
+          <span data-lang="en"> · field work and plant assembly.</span>
+        </figcaption>
       </figure>
+
       <figure>
         <img src="./P2080039.JPG" alt="Equipo trabajando en banco de prueba" loading="lazy" decoding="async">
-        <figcaption><strong>Banco de prueba</strong> · calibración y ensayos.</figcaption>
+        <figcaption>
+          <strong data-lang="es">Banco de prueba</strong>
+          <strong data-lang="en">Test bench</strong>
+          <span data-lang="es"> · calibración y ensayos.</span>
+          <span data-lang="en"> · calibration and testing.</span>
+        </figcaption>
       </figure>
+
       <figure>
         <img src="./P3120202.JPG" alt="Estructura metálica de gran luz" loading="lazy" decoding="async">
-        <figcaption><strong>Estructuras</strong> · galpón/techo metálico.</figcaption>
+        <figcaption>
+          <strong data-lang="es">Estructuras</strong>
+          <strong data-lang="en">Structures</strong>
+          <span data-lang="es"> · galpón/techo metálico.</span>
+          <span data-lang="en"> · steel shed/roof structure.</span>
+        </figcaption>
       </figure>
+
       <figure>
         <img src="./P7210005.JPG" alt="Planta reguladora con cercado perimetral" loading="lazy" decoding="async">
-        <figcaption><strong>PR</strong> · planta reguladora y filtros.</figcaption>
+        <figcaption>
+          <strong data-lang="es">PR</strong>
+          <strong data-lang="en">PR</strong>
+          <span data-lang="es"> · planta reguladora y filtros.</span>
+          <span data-lang="en"> · regulating station and filters.</span>
+        </figcaption>
       </figure>
+
       <figure>
         <img src="./P7210015.JPG" alt="Tendido de cañerías PEAD en barrio" loading="lazy" decoding="async">
-        <figcaption><strong>Red PEAD</strong> · tendido en barrio.</figcaption>
+        <figcaption>
+          <strong data-lang="es">Red PEAD</strong>
+          <strong data-lang="en">HDPE network</strong>
+          <span data-lang="es"> · tendido en barrio.</span>
+          <span data-lang="en"> · neighborhood pipe laying.</span>
+        </figcaption>
       </figure>
+
       <figure>
         <img src="./P7270097.JPG" alt="Skid de regulación y válvulas" loading="lazy" decoding="async">
-        <figcaption><strong>Skids</strong> · montaje de válvulas y medidores.</figcaption>
+        <figcaption>
+          <strong data-lang="es">Skids</strong>
+          <strong data-lang="en">Skids</strong>
+          <span data-lang="es"> · montaje de válvulas y medidores.</span>
+          <span data-lang="en"> · valve and meter skid assembly.</span>
+        </figcaption>
       </figure>
+
       <figure>
         <img src="./14711079_1233296053387447_1685803130405779336_o.jpg" alt="Espacio público con estructuras tensadas" loading="lazy" decoding="async">
-        <figcaption><strong>Obra civil</strong> · pérgolas/espacios públicos.</figcaption>
+        <figcaption>
+          <strong data-lang="es">Obra civil</strong>
+          <strong data-lang="en">Civil works</strong>
+          <span data-lang="es"> · pérgolas/espacios públicos.</span>
+          <span data-lang="en"> · pergolas and public spaces.</span>
+        </figcaption>
       </figure>
+
       <figure>
         <img src="./20190116_123132.jpg" alt="Taller con vigas y celosías metálicas" loading="lazy" decoding="async">
-        <figcaption><strong>Taller</strong> · fabricación de estructuras.</figcaption>
+        <figcaption>
+          <strong data-lang="es">Taller</strong>
+          <strong data-lang="en">Workshop</strong>
+          <span data-lang="es"> · fabricación de estructuras.</span>
+          <span data-lang="en"> · fabrication of structures.</span>
+        </figcaption>
       </figure>
+
       <figure>
         <img src="./20190227_145030.jpg" alt="Mesa de trabajo con piezas y soldadura" loading="lazy" decoding="async">
-        <figcaption><strong>Soldadura</strong> · armado y preparación.</figcaption>
+        <figcaption>
+          <strong data-lang="es">Soldadura</strong>
+          <strong data-lang="en">Welding</strong>
+          <span data-lang="es"> · armado y preparación.</span>
+          <span data-lang="en"> · assembly and preparation.</span>
+        </figcaption>
       </figure>
     </div>
   </section>
 
   <!-- CONTACTO -->
   <section id="contacto" class="section">
-    <h2>Contacto</h2>
-    <p class="lead">Contanos tu proyecto y te enviamos una propuesta con alcance y cronograma.</p>
+    <h2>
+      <span data-lang="es">Contacto</span>
+      <span data-lang="en">Contact</span>
+    </h2>
+    <p class="lead" data-lang="es">
+      Contanos tu proyecto y te enviamos una propuesta con alcance y cronograma.
+    </p>
+    <p class="lead" data-lang="en">
+      Tell us about your project and we will send you a proposal with scope and schedule.
+    </p>
     <div class="cta">
-      <a class="btn btn-wpp" href="https://wa.me/5493874594914" target="_blank" rel="noopener">WhatsApp</a>
-      <a class="btn btn-mail" href="mailto:albertogir@kensrl.com" target="_blank" rel="noopener">Enviar mail</a>
+      <a class="btn btn-wpp" href="https://wa.me/5493874594914" target="_blank" rel="noopener">
+        <span data-lang="es">WhatsApp</span>
+        <span data-lang="en">WhatsApp</span>
+      </a>
+      <a class="btn btn-mail" href="mailto:albertogir@kensrl.com" target="_blank" rel="noopener">
+        <span data-lang="es">Enviar mail</span>
+        <span data-lang="en">Send email</span>
+      </a>
     </div>
   </section>
 
@@ -275,20 +748,32 @@
   <footer class="footer">
     <div class="footer-wrap">
       <div class="naturgy">
-        <span>Empresa habilitada por</span>
+        <span data-lang="es">Empresa habilitada por</span>
+        <span data-lang="en">Company authorized by</span>
         <img src="./naturgy-logo.png?v=2" alt="Naturgy" loading="lazy" decoding="async">
       </div>
-      <small style="color:#6b7280">© <span id="y"></span> Ken SRL. Todos los derechos reservados.</small>
+      <small style="color:#6b7280">
+        <span data-lang="es">© <span id="y"></span> Ken SRL. Todos los derechos reservados.</span>
+        <span data-lang="en">© <span id="y-copy"></span> Ken SRL. All rights reserved.</span>
+      </small>
     </div>
   </footer>
 
+  <!-- Año dinámico -->
   <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
+    const year = new Date().getFullYear();
+    document.getElementById('y').textContent = year;
+    const yCopy = document.getElementById('y-copy');
+    if (yCopy) yCopy.textContent = year;
   </script>
 
+  <!-- Lightbox -->
   <dialog id="lightbox">
     <div class="lightbox-wrap">
-      <button class="lightbox-close" onclick="document.getElementById('lightbox').close()">Cerrar</button>
+      <button class="lightbox-close" onclick="document.getElementById('lightbox').close()">
+        <span data-lang="es">Cerrar</span>
+        <span data-lang="en">Close</span>
+      </button>
       <img id="lightbox-img" src="" alt="Imagen de obra"/>
     </div>
   </dialog>
@@ -305,6 +790,29 @@
         }
       });
     })();
+  </script>
+
+  <!-- Cambio de idioma -->
+  <script>
+    function setLang(lang){
+      document.querySelectorAll("[data-lang]").forEach(el=>{
+        el.style.display = (el.getAttribute("data-lang") === lang) ? "" : "none";
+      });
+
+      const btnEs = document.getElementById("btn-es");
+      const btnEn = document.getElementById("btn-en");
+      if(btnEs && btnEn){
+        btnEs.classList.toggle("active", lang === "es");
+        btnEn.classList.toggle("active", lang === "en");
+      }
+
+      localStorage.setItem("lang", lang);
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const lang = localStorage.getItem("lang") || "es";
+      setLang(lang);
+    });
   </script>
 </body>
 </html>
